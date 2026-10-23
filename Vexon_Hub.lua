@@ -26,6 +26,9 @@ end
 
 ply = game.Players
 plr = ply.LocalPlayer
+-- Vexon Auto Farm movement speed
+getgenv().TweenSpeedNear = 360
+getgenv().TweenSpeedFar = 360
 Root = plr.Character.HumanoidRootPart
 replicated = game:GetService("ReplicatedStorage")
 Lv = game.Players.LocalPlayer.Data.Level.Value
@@ -1310,7 +1313,7 @@ do
 	sea3 = game.PlaceId == 7449423635 or game.PlaceId == 100117331123089
 
 	local t11 = {
-		["Tween Speed"] = 200,
+		["Tween Speed"] = 360,
 		["Bypass Teleport"] = false,
 		["Up Y"] = false,
 		["Up Y When Low Health"] = false,
