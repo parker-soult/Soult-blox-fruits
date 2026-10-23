@@ -281,7 +281,8 @@ t9.Kill = function(p10, p11)
 		end
 
 		PosMon = p10:GetAttribute("Locked").Position
-		BringEnemy()
+		-- Agrupa somente NPCs do mesmo tipo do alvo atual da missão.
+		BringEnemy(p10)
 		EquipWeapon(_G.SelectWeapon)
 
 		local Tool = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
@@ -2926,7 +2927,7 @@ do
 								v332 = true
 
 								while true do
-									task.wait(Sec)
+									task.wait(0.07)
 									_tp(v338.HumanoidRootPart.CFrame * CFrame.new(0, 20, 0))
 									t9.Kill(v338, _G.Level)
 
